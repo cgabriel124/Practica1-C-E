@@ -30,9 +30,17 @@ Descargar la imagen **hello-world**
 # COMPLETAR
 
 **¿Qué es nginx**
+
+Nginx ​ es un servidor web/Proxy inverso ligero de alto rendimiento y un proxy para protocolos de correo electrónico.
+
 # COMPLETAR 
 
 Descargar la imagen  **nginx** en la versión **alpine**
+```
+docker pull nginx
+```
+![Resultado](Results/1.PNG)
+
 # COMPLETAR
 
 ### Listar imágenes
@@ -40,6 +48,8 @@ Descargar la imagen  **nginx** en la versión **alpine**
 ```
 docker images
 ```
+
+![Resultado](Results/2.PNG)
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 
@@ -53,28 +63,38 @@ El comando docker inspect se utiliza para obtener información detallada sobre u
 docker inspect <nombre imagen>
 docker inspect <nombre imagen>:<tag>
 ```
-
 Inspeccionar la imagen hello-world 
+```
+docker inspect hello-world
+```
+![Resultado](Results/3.PNG)
 # COMPLETAR
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
+
+Algoritmo de hash seguro de 256 bits (sha256)
 # COMPLETAR
+
+
 
 ### Filtrar imágenes
 
 ```
 docker images | grep <termino a buscar>
-
+docker images | Select-String -Pattern "ng"
 ```
+![Resultado](Results/5.PNG)
 
 ### Para eliminar una imagen
 Eliminar permanentemente la imagen de tu sistema Docker.
 
 ```
 docker rmi <nombre imagen>:<tag>
+docker rmi hello-world
 ```
 
 Eliminar la imagen hello-world 
+![Resultado](Results/4.PNG)
 # COMPLETAR
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
@@ -86,4 +106,4 @@ Es una buena práctica detener y eliminar todos los contenedores que dependan de
 ```
 docker rmi -f <nombre imagen>:<tag>
 ```
-
+![Resultado](Results/6.PNG)
